@@ -1,0 +1,33 @@
+<div class="container d-flex flex-column justify-content-center align-items-center">
+<% if !@budgets.empty? %>
+  <% @budgets.each do |budgets| %>
+    <div class="container">
+    <table class="table table-striped", style="text-align: center;">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+
+          <tr>
+            <td><%= budgets.id  %></td>
+            <td><%= budgets.name %></td>
+            <td><%= budgets.amount %></td>
+            </td>
+          </tr>
+
+      </tbody>
+    </table>
+      </div>
+    <% end %>
+  <% else %>
+
+  <h4> you have no budget</h4>
+</div>
+  <% end %>
+  <%= link_to "Add New bugets", new_user_budget_path, class: "btn btn-success mb-5" %>
+
+</div>
