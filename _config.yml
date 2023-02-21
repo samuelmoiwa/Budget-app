@@ -1,0 +1,38 @@
+emoji:
+  # for other emoji packs providing a src key is required.
+  # images will be served from this base address
+  # it must be a valid URL, if you don't provide a string to src key
+  # plugin will ignore this settings and uses default settings which
+  # is OpenMoji emoji pack.
+  src: "https://www.emojisource.com"
+
+  # asset key is optional.
+  # it will be appended to the end of src keyword to make a complete URL,
+  # if you don't provide the asset value, it will be defaulted to "emoji".
+  # you can also provide an empty string "" if your source doesn't have any asset path.
+  asset: "/color/png"
+
+  # final path will be  "https://www.emojisource.com/color/png" and
+  # emoji images will serve from this address.
+  # in case of no asset value, final path would be  "https://www.emojisource.com/color/svg/emoji"
+
+  # MORE CONFIGURATION OPTIONS
+  # all configs below are optional.
+
+  # default emoji image extension is svg (vector file), but if your emoji source
+  # images are in other formats, you can manually override default extension by using below key
+  # and specify your desired extension (png, jpg, jpeg, bmp, etc).
+  extension: "png"
+
+  # you can also provide default inline css properties for emoji images with img_attrs
+  # key, keep in mind that the keys must be valid css properties like padding, margin
+  # height, width, etc.
+  # below is a the default settings.
+  img_attrs:
+    class: "emoji"
+    height: "20"
+    width: "20"
+
+
+plugins:
+  - jekyll-openmoji
