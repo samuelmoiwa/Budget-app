@@ -96,18 +96,16 @@ h1 {
 }
 
 .signup_page_main_div {
-  diaplays: flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  justify-content: center;
   align-items: center;
 }
 
 .signup_page_div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin-top: 70px;
 }
