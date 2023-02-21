@@ -1,15 +1,96 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.categorieContainer {
+  border: 2px solid #3571b9;
+  color: #000;
+  text-decoration: none !important;
+  background-color: #fff;
+  margin-bottom: 7px;
+  width: 24rem;
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  height: 5rem;
+}
+
+.app_name {
+  color: #3571b9;
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+@font-face {
+  font-family: 'OpenMoji';
+  src: URL('OpenMoji-Color.SVG.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenMoji';
+  src: URL('OpenMoji-Color.SVG.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OpenMoji';
+  src: URL('OpenMoji-Color.SVG.ttf') format('truetype');
+}
+
+body {
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif !important;
+}
+
+h1 {
+  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif !important;
+}
+
+.added {
+  background-color: #fff;
+}
+
+.time {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 15rem;
+}
+
+.bts {
+  background-color: #60b524;
+  width: 16rem;
+  height: 4rem;
+  margin-left: 7rem;
+  margin-top: 1rem;
+  font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+.btscon {
+  margin-top: 15rem;
+  background-color: #60b524;
+  border: 1px solid #60b524;
+  width: 30rem;
+  height: 6rem;
+}
+
+.signup_page_main_div {
+  diaplays: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup_page_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.input,
+.form-control {
+  width: 300px;
+}
+
+.signup_btn {
+  margin-top: 20px;
+}
