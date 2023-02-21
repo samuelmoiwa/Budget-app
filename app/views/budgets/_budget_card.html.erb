@@ -1,0 +1,5 @@
+<div class="card d-flex flex-column justify-content-center align-items-center m-3 pt-3" style="width: 18rem;">
+    <h3 class="card-title ">Name: <%= budget.name%></h3>
+    <p class="card-text">Amount: <%= budget.amount %></p>
+    <pclass="card-text opacity-50"><%= budget.created_at.strftime('%I:%M %p').downcase %></p>
+</div>
