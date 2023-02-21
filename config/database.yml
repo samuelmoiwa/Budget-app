@@ -28,12 +28,11 @@ default: &default
 development:
   <<: *default
   database: Budget_app_development
-
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: Budget_app
+  #username: budget_app
 
   # The password associated with the postgres role (username).
   #password:
@@ -62,7 +61,6 @@ development:
 test:
   <<: *default
   database: Budget_app_test
-
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -85,6 +83,7 @@ test:
 #
 production:
   <<: *default
-  database: Budget_app_production
-  username: Budget_app
+  database: budget_app_production
+  username: budget_app
   password: <%= ENV["BUDGET_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
