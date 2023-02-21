@@ -1,0 +1,7 @@
+<div class="container-fluid text-center d-flex flex-column vh-100">
+  <h1 class="d-flex justify-content-center align-items-center h-50 mb-5">Budget App</h1>
+  <% unless user_signed_in? %>
+    <%= link_to "LOG IN", new_user_session_path, :class => 'btn btn-primary mt-5 mb-2 logint' %>
+    <%= link_to "SIGN UP", new_user_registration_path, :class => 'btn mb-2 sign-upt mb-5' %>
+  <% end %>
+</div>
