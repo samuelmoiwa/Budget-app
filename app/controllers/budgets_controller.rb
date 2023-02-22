@@ -1,6 +1,6 @@
 class BudgetsController < ApplicationController
   def index
-    @budgets = Budget.all.includes([:user]).where(user_id: current_user.id).order(:name)
+    @budgets = Budget.all.includes([:user]).where(author_id: current_user.id).order(:name)
   end
 
   def show
@@ -8,13 +8,14 @@ class BudgetsController < ApplicationController
   end
 
   def new
-    @groups = Group.where(user_id: current_user.id)
+    @groups = Group.where(author_id: current_user.id)
     @budget = Budget.new
   end
 
   def create
     @user = current_user
-    @budget = @user.budgets.new(budget_params)
+    @budget = Budget.new(budget_params)
+    @budget.author_id = @user.id
     group_ids = params[:groups]
 
     if @budget.save
