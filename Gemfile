@@ -59,6 +59,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'rspec-core', '3.12.1'
   gem 'selenium-webdriver'
   gem 'webdrivers'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
