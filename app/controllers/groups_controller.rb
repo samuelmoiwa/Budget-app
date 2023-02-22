@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.all.where(user_id: current_user.id).order(created_at: :desc)
+    @groups = Group.all.where(author_id: current_user.id).order(created_at: :desc)
   end
 
   def show
@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
     # rubocop:enable Layout/LineLength
 
     @user = current_user
-    @group = Group.new(name: params[:name], icon: params[:icon], user_id: @user.id)
+    @group = Group.new(name: params[:name], icon: params[:icon], author_id: @user.id)
     if @group.save
       flash[:notice] = 'Successfully created group.'
       redirect_to user_groups_path
