@@ -105,11 +105,13 @@ GEM
       http_parser.rb (~> 0)
     erubi (1.12.0)
     eventmachine (1.2.7)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     forwardable-extended (2.6.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     google-protobuf (3.22.0-x64-mingw-ucrt)
+    google-protobuf (3.22.0-x86_64-linux)
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
@@ -193,9 +195,12 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.0-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.14.0-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -268,6 +273,8 @@ GEM
     safe_yaml (1.0.5)
     sass-embedded (1.58.3-x64-mingw-ucrt)
       google-protobuf (~> 3.21)
+    sass-embedded (1.58.3-x86_64-linux-gnu)
+      google-protobuf (~> 3.21)
     selenium-webdriver (4.7.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -317,6 +324,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
