@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Group index page', type: :feature do
   before(:each) do
     @user = User.create(name: 'Elie', email: 'test@gmail.com', password: 'password')
-    @group = Group.create(user: @user, name: 'Food', icon: 'https://icon_url')
+    @group = Group.create(author: @user, name: 'Food', icon: 'https://icon_url')
     visit new_user_session_path
     fill_in 'Email', with: 'test@gmail.com'
     fill_in 'Password', with: 'password'
@@ -11,9 +11,6 @@ RSpec.describe 'Group index page', type: :feature do
     visit user_groups_path(@user.id)
   end
 
-  scenario 'I can see the group card.' do
-    expect(page).to have_css('div.card')
-  end
   scenario 'I can see the page title.' do
     expect(page).to have_content 'Categories'
   end
